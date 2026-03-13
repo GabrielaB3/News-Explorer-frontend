@@ -1,0 +1,17 @@
+@import url(./vendor/normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+/* Helper para que las imágenes no se desborden de sus contenedores */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,0 +1,53 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.navigation__link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+.navigation__link_active {
+  border-bottom: 3px solid #ffffff; /* La línea blanca debajo de "Home" */
+}
+
+.navigation__button {
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  color: #ffffff;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.navigation__button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navigation__logout-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.navigation__link_active {
+  border-bottom: 3px solid #ffffff;
+}

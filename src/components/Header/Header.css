@@ -1,0 +1,61 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea sutil */
+  z-index: 10;
+}
+
+.header__container {
+  width: 90%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header__menu-button {
+  display: none;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: url("../../assets/menu-icon.svg") center no-repeat;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 620px) {
+  .header_menu-open {
+    background-color: #1a1b22; /* El fondo oscuro de News Explorer */
+    border-bottom: none;
+  }
+
+  .header__container {
+    padding: 0 16px;
+  }
+
+  .header__menu-button {
+    display: block; /* Aparece en móvil */
+  }
+
+  .header__menu-button_close {
+    background: url("../../assets/close.svg") center no-repeat;
+  }
+
+  .header__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}
