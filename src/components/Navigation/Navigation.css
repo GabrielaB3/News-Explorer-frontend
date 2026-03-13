@@ -30,12 +30,10 @@
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  cursor: pointer;
 }
 
 .navigation__button:hover {
@@ -48,6 +46,35 @@
   object-fit: contain;
 }
 
-.navigation__link_active {
-  border-bottom: 3px solid #ffffff;
+@media screen and (max-width: 620px) {
+  .navigation {
+    display: none; /* Escondido por defecto en móvil */
+    position: absolute;
+    top: 56px; /* Ajusta esto según la altura de tu header */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    background-color: #1a1b22;
+    gap: 22px;
+  }
+
+  .navigation_visible {
+    display: flex; /* Se muestra cuando isMenuOpen es true */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .navigation__link {
+    width: 100%;
+    font-size: 18px;
+    padding: 8px 0;
+    border-bottom: none;
+  }
+
+  .navigation__button {
+    width: 100%; /* El botón de Sign in/Logout ocupa todo el ancho en móvil */
+    justify-content: center;
+    height: 56px;
+  }
 }

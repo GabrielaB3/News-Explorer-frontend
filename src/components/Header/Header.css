@@ -37,11 +37,21 @@
 @media screen and (max-width: 620px) {
   .header_menu-open {
     background-color: #1a1b22; /* El fondo oscuro de News Explorer */
-    border-bottom: none;
+  }
+
+  .header__logo {
+    font-size: 16px;
+  }
+
+  .header {
+    height: auto; /* Dejamos que el contenido dicte la altura */
+    border-bottom: none; /* Quitamos la línea larga del escritorio */
   }
 
   .header__container {
-    padding: 0 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%; /* Que ocupe todo el ancho para que la línea cruce */
+    padding: 16px; /* Le damos espacio interno */
   }
 
   .header__menu-button {
@@ -50,12 +60,18 @@
 
   .header__menu-button_close {
     background: url("../../assets/close.svg") center no-repeat;
+    width: 24px;
+    height: 24px;
   }
 
   .header__overlay {
-    position: fixed;
-    inset: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+    z-index: -2;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }

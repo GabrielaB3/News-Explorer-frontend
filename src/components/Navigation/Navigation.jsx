@@ -3,11 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navigation.css";
 import logoutIcon from "../../assets/logout.svg";
 
-function Navigation({ isLoggedIn, onSignInClick }) {
+function Navigation({ isLoggedIn, onSignInClick, isMenuOpen }) {
   const location = useLocation();
 
   return (
-    <nav className="navigation">
+    <nav className={`navigation ${isMenuOpen ? "navigation_visible" : ""}`}>
       <Link
         to="/"
         className={`navigation__link ${location.pathname === "/" ? "navigation__link_active" : ""}`}

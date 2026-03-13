@@ -58,6 +58,14 @@
     gap: 24px;
   }
 
+  .about__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about__title {
+    font-size: 30px;
+  }
   .about__image {
     width: 272px;
     height: 272px;
