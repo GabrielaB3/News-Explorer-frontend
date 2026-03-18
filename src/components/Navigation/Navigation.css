@@ -36,6 +36,19 @@
   gap: 12px;
 }
 
+.navigation__link_theme_light {
+  color: #1a1b22 !important;
+}
+
+.navigation__button_theme_light {
+  color: #1a1b22;
+  border-color: #1a1b22;
+}
+
+.navigation__link_active_theme_light {
+  border-bottom: 3px solid #1a1b22;
+}
+
 .navigation__button:hover {
   background: rgba(255, 255, 255, 0.1);
 }
@@ -48,9 +61,9 @@
 
 @media screen and (max-width: 620px) {
   .navigation {
-    display: none; /* Escondido por defecto en móvil */
+    display: none;
     position: absolute;
-    top: 56px; /* Ajusta esto según la altura de tu header */
+    top: 56px;
     left: 0;
     width: 100%;
     flex-direction: column;
@@ -61,7 +74,8 @@
   }
 
   .navigation_visible {
-    display: flex; /* Se muestra cuando isMenuOpen es true */
+    display: flex;
+    padding: 16px 16px 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
@@ -70,6 +84,7 @@
     font-size: 18px;
     padding: 8px 0;
     border-bottom: none;
+    height: auto;
   }
 
   .navigation__button {

@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 function RegisterModal({ isOpen, onClose, onSecondaryAction, onSubmit }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    if (isOpen) {
+      setEmail("");
+      setPassword("");
+      setUsername("");
+    }
+  }, [isOpen]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit({ email, password, username });
+  };
+
   return (
     <ModalWithForm
       title="Sign up"
@@ -10,14 +27,18 @@ function RegisterModal({ isOpen, onClose, onSecondaryAction, onSubmit }) {
       onClose={onClose}
       name="signup"
       onSecondaryAction={onSecondaryAction}
-      onSubmit={onSubmit}
+      onSubmit={handleSubmit}
+      onSecondaryButtonText="Sign in"
     >
       <label className="modal__label">
         Email
         <input
           className="modal__input"
           type="email"
+          name="email"
           placeholder="Enter email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
       </label>
@@ -26,6 +47,9 @@ function RegisterModal({ isOpen, onClose, onSecondaryAction, onSubmit }) {
         <input
           className="modal__input"
           type="password"
+          name="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter password"
           required
         />
@@ -35,6 +59,9 @@ function RegisterModal({ isOpen, onClose, onSecondaryAction, onSubmit }) {
         <input
           className="modal__input"
           type="text"
+          name="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           placeholder="Enter your username"
           required
         />

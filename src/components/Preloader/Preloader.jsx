@@ -4,7 +4,7 @@ import "./Preloader.css";
 function Preloader() {
   return (
     <div className="preloader">
-      <i className="circle-preloader"></i>
+      <div className="circle-preloader"></div>
       <p className="preloader__text">Searching for news...</p>
     </div>
   );

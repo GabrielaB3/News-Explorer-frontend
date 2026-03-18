@@ -5,7 +5,7 @@
   height: 80px;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea sutil */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 10;
 }
 
@@ -34,28 +34,49 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 620px) {
-  .header_menu-open {
-    background-color: #1a1b22; /* El fondo oscuro de News Explorer */
-  }
+.header_menu-open {
+  background-color: transparent;
+}
 
+.header_theme_light {
+  background-color: #ffffff !important;
+  box-shadow: inset 0px -1px 0px #d1d2d6;
+}
+
+.header__logo_theme_light {
+  color: #1a1b22;
+}
+
+.header__menu-button_theme_light {
+  filter: invert(1);
+}
+
+.header_menu-open.header_theme_light {
+  background-color: #1a1b22;
+}
+
+.header_menu-open.header_theme_light .header__logo_theme_light {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 620px) {
   .header__logo {
     font-size: 16px;
   }
 
   .header {
-    height: auto; /* Dejamos que el contenido dicte la altura */
-    border-bottom: none; /* Quitamos la línea larga del escritorio */
+    height: auto;
+    border-bottom: none;
   }
 
   .header__container {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    width: 100%; /* Que ocupe todo el ancho para que la línea cruce */
-    padding: 16px; /* Le damos espacio interno */
+    width: 100%;
+    padding: 16px;
   }
 
   .header__menu-button {
-    display: block; /* Aparece en móvil */
+    display: block;
   }
 
   .header__menu-button_close {
@@ -73,5 +94,10 @@
     left: 0;
     right: 0;
     bottom: 0;
+  }
+
+  .header_menu-open {
+    background-color: #1a1b22;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
