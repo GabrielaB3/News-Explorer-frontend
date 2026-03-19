@@ -1,16 +1,33 @@
-# React + Vite
+# Project: News Explorer (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my project! I built News Explorer because I wanted to solve a modern dilemma: the overwhelming flood of information. Instead of jumping between a dozen news sites, I created a central hub where you can find exactly what’s happening in the world and, save the stories that actually matter to you.
 
-Currently, two official plugins are available:
+## How it works
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app connects to the NewsAPI to fetch live, global data based on any keyword you’re curious about—from "AI" to "Jupiter." It’s designed to be a clean, distraction-free environment for reading.
 
-## React Compiler
+If you find a must read article, you can "bookmark" it. Since the full backend is currently in development, I implemented a simulated login and storage system (Stubbing). This means the app acts exactly like a finished product: it checks for a "fake" security token, handles a mock login flow, and manages your saved articles as if a real database were responding in real time.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Technologies and techniques used
 
-## Expanding the ESLint configuration
+- React 19 (Hooks & Functional Components): The heart of the application. I used useEffect to synchronize the news search with the API and useState to manage complex UI states, like switching between the "Results" view and the "Preloader" spinner.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Vite: Its lightning-fast HMR (Hot Module Replacement) and optimized build process.
+
+- Advanced Routing (HashRouter): To ensure a seamless experience on GitHub Pages, I implemented HashRouter. This prevents those annoying "404 errors" when a user refreshes their "Saved Articles" page, keeping the navigation stable.
+
+- Mocking & Stubbing (Async/Await): I wrote a custom simulation layer for the backend. By using Promises and setTimeout, I recreated the "wait time" of a real server. This allowed me to polish the User Experience (UX) by testing how the app handles loading states and success messages before the real API was even ready.
+
+- CSS3 & BEM Methodology: Styles are strictly organized using the BEM (Block Element Modifier) methodology. This was crucial for keeping the complex "News Card" component maintainable across mobile, tablet, and desktop views.
+
+- Form Validation: I integrated the validator library to ensure that user inputs (like emails in the login modal) are legitimate, providing instant feedback and preventing "empty" searches.
+
+- Automated Deployment: I configured a custom deployment pipeline using gh-pages and a specific base configuration in Vite to ensure all assets load perfectly on the web, regardless of the server's directory structure.
+
+## Link to project on GitHub Pages
+
+- [Link to the project](https://gabrielab3.github.io/News-Explorer-frontend/)
+
+## Link to Frontend Project
+
+- [Link to the project](https://github.com/GabrielaB3/News-Explorer-frontend.git)
