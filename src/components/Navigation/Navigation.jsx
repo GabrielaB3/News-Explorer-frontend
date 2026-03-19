@@ -7,6 +7,7 @@ import logoutIconDark from "../../assets/logout-dark.svg";
 function Navigation({
   isLoggedIn,
   onSignInClick,
+  onLogout,
   isMenuOpen,
   theme,
   userName,
@@ -46,6 +47,7 @@ function Navigation({
           className={`navigation__button navigation__button_logout ${
             theme === "light" ? "navigation__button_theme_light" : ""
           }`}
+          onClick={onLogout}
         >
           {userName}
           <img

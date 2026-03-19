@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useNews } from "../../hooks/useNews";
-import { login, checkToken } from "../../utils/auth";
+import { register, login, checkToken } from "../../utils/auth";
 import { saveArticle, deleteArticle } from "../../utils/MainApi";
 import "./App.css";
 import Header from "../Header/Header";
@@ -99,9 +99,13 @@ function App() {
     setIsSignUpPopupOpen(false);
   };
 
-  const handleRegisterSubmit = () => {
-    setIsSignUpPopupOpen(false);
-    setIsInfoTooltipOpen(true);
+  const handleRegisterSubmit = ({ email, password, username }) => {
+    register(email, password, username)
+      .then(() => {
+        setIsSignUpPopupOpen(false);
+        setIsInfoTooltipOpen(true);
+      })
+      .catch((err) => console.error("Register error:", err));
   };
 
   const handleLoginSubmit = ({ email, password }) => {
@@ -136,6 +140,12 @@ function App() {
       .catch((err) => console.error("Delete error:", err));
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("jwt");
+    setIsLoggedIn(false);
+    setCurrentUser({ name: "" });
+  };
+
   // 4. Función para cerrar los modales
   const closeAllPopups = () => {
     setIsSignInPopupOpen(false);
@@ -148,6 +158,7 @@ function App() {
       <Header
         isLoggedIn={isLoggedIn}
         onSignInClick={handleSignInClick}
+        onLogout={handleLogout}
         theme={location.pathname === "/saved-news" ? "light" : "dark"}
         userName={currentUser.name}
       />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import "./Header.css";
 
-function Header({ isLoggedIn, onSignInClick, theme, userName }) {
+function Header({ isLoggedIn, onSignInClick, onLogout, theme, userName }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -37,6 +37,7 @@ function Header({ isLoggedIn, onSignInClick, theme, userName }) {
             onSignInClick();
             setIsMenuOpen(false);
           }}
+          onLogout={onLogout}
           isMenuOpen={isMenuOpen}
           theme={theme}
           userName={userName}
