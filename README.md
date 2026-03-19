@@ -31,3 +31,7 @@ If you find a must read article, you can "bookmark" it. Since the full backend i
 ## Link to Frontend Project
 
 - [Link to the project](https://github.com/GabrielaB3/News-Explorer-frontend.git)
+
+## Project Pitch Video
+
+- Check out [this video](https://drive.google.com/file/d/1Rw2anqnfHmVL3vhWMDEIVtp_UMXNe4-I/view?usp=sharing), where I describe my project and some challenges I faced while building
