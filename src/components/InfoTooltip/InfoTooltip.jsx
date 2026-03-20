@@ -5,10 +5,10 @@ function InfoTooltip({ isOpen, onClose, onSecondaryAction }) {
   return (
     <ModalWithForm
       title="Registration successfully completed!"
-      name="success" // Usamos este name para el CSS específico
+      name="success"
       isOpen={isOpen}
       onClose={onClose}
-      buttonText="" // Al enviarlo vacío, el botón no se renderiza (con el ajuste que hicimos)
+      buttonText=""
       onSecondaryAction={onSecondaryAction}
     />
   );

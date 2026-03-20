@@ -159,7 +159,7 @@
 
 @media screen and (max-width: 620px) {
   .modal__container {
-    width: calc(100% - 32px); /* Deja un pequeño margen a los lados */
+    width: calc(100% - 32px);
     padding: 25px 16px 28px;
     border-radius: 16px;
     max-width: 320px;
@@ -167,7 +167,7 @@
 
   .modal__close {
     top: -36px;
-    right: 0; /* Lo movemos para que no se salga de la pantalla */
+    right: 0;
     width: 24px;
     height: 24px;
     background-size: contain;

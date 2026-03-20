@@ -9,7 +9,7 @@ function SearchForm({ onSearch }) {
   const handleChange = (e) => {
     setKeyword(e.target.value);
     if (e.target.value.length > 0) {
-      setError(""); // Limpiamos el error mientras el usuario escribe
+      setError("");
     }
   };
 
@@ -35,11 +35,10 @@ function SearchForm({ onSearch }) {
       </p>
       <div className="search-form__input-wrapper">
         {" "}
-        {/* Contenedor para manejar el error */}
         <div className="search-form__input-container">
           <input
             className="search-form__input"
-            placeholder={error ? error : "Enter topic"} // Cambia el placeholder si hay error
+            placeholder={error ? error : "Enter topic"}
             type="text"
             value={keyword}
             onChange={handleChange}

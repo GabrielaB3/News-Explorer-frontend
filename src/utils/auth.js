@@ -1,5 +1,3 @@
-// Stub functions — simulan las llamadas al backend de autenticación
-
 const FAKE_TOKEN = "fake-jwt-token-12345";
 
 export const register = (email, password, username) => {

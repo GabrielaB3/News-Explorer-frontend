@@ -1,6 +1,6 @@
 import React from "react";
 import "./NoResults.css";
-import notFoundIcon from "../../assets/not-found.svg"; // Asegúrate de tener este SVG
+import notFoundIcon from "../../assets/not-found.svg";
 
 function NoResults() {
   return (

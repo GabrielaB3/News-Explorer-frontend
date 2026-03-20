@@ -3,11 +3,9 @@ const newsApiBaseUrl =
     ? "https://nomoreparties.co/news/v2/everything"
     : "https://newsapi.org/v2/everything";
 
-// Tu API Key (¡Asegúrate de registrarte en newsapi.org para obtenerla!)
 const API_KEY = "0e5e5cb633c741159740f4f1d0ceed0b";
 
 export const getNews = (keyword) => {
-  // Calculamos las fechas
   const to = new Date().toISOString();
   const from = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
 

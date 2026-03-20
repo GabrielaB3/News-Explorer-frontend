@@ -18,7 +18,7 @@
 }
 
 .navigation__link_active {
-  border-bottom: 3px solid #ffffff; /* La línea blanca debajo de "Home" */
+  border-bottom: 3px solid #ffffff;
 }
 
 .navigation__button {
@@ -88,7 +88,7 @@
   }
 
   .navigation__button {
-    width: 100%; /* El botón de Sign in/Logout ocupa todo el ancho en móvil */
+    width: 100%;
     justify-content: center;
     height: 56px;
   }

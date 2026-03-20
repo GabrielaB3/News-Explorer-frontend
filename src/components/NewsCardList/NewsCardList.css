@@ -23,10 +23,9 @@
   font-weight: 400;
 }
 
-/* LA CUADRÍCULA MÁGICA */
 .news-cards__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   width: 100%;
   margin-bottom: 64px;
@@ -62,12 +61,12 @@
   }
 
   .news-cards__grid {
-    grid-template-columns: 1fr; /* 1 sola columna en Móvil */
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .news-cards__show-more {
-    width: 100%; /* Botón a todo lo ancho en móvil */
+    width: 100%;
     padding: 16px 0;
   }
 }

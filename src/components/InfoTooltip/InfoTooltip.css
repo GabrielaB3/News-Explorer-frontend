@@ -9,13 +9,13 @@
 
 @media screen and (max-width: 620px) {
   .modal_type_success .modal__container {
-    min-height: 170px; /* Un poco más compacto */
+    min-height: 170px;
     padding-bottom: 40px;
   }
 
   .modal_type_success .modal__title {
     font-size: 20px;
-    max-width: 100%; /* Que ocupe todo el ancho disponible */
+    max-width: 100%;
   }
 
   .modal_type_success .modal__secondary-link {

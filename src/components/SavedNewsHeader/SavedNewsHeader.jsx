@@ -4,7 +4,6 @@ import "./SavedNewsHeader.css";
 function SavedNewsHeader({ cards, userName }) {
   const getKeywordsText = () => {
     const keywords = cards.map((card) => card.keyword);
-    // Contamos ocurrencias: { "Nature": 3, "Politics": 1... }
     const count = keywords.reduce((acc, curr) => {
       acc[curr] = (acc[curr] || 0) + 1;
       return acc;

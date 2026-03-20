@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import "./NewsCardList.css";
 import NewsCard from "../NewsCard/NewsCard";
 
-function NewsCardList({ cards, savedCards, isLoggedIn, isSavedPage, onSave, onDelete }) {
+function NewsCardList({
+  cards,
+  savedCards,
+  isLoggedIn,
+  isSavedPage,
+  onSave,
+  onDelete,
+}) {
   // Mostramos inicialmente 3 tarjetas
   const [visibleCards, setVisibleCards] = useState(
     isSavedPage ? cards.length : 3,
@@ -31,7 +38,6 @@ function NewsCardList({ cards, savedCards, isLoggedIn, isSavedPage, onSave, onDe
           ))}
         </div>
 
-        {/* El botón solo se muestra si hay más tarjetas por ver y no estamos en la página de guardados */}
         {!isSavedPage && visibleCards < cards.length && (
           <button className="news-cards__show-more" onClick={handleShowMore}>
             Show more

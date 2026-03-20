@@ -9,7 +9,6 @@ body {
   font-family: "Roboto", Arial, sans-serif;
 }
 
-/* Helper para que las imágenes no se desborden de sus contenedores */
 img {
   max-width: 100%;
   height: auto;

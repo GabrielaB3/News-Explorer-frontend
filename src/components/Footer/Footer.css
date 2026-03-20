@@ -65,7 +65,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column; /* Cambiamos a column para controlar mejor el orden interno */
+    flex-direction: column;
     align-items: flex-start;
     padding: 20px 16px;
     gap: 30px;
@@ -73,7 +73,7 @@
 
   .footer__nav {
     display: flex;
-    flex-direction: row; /* Redes sociales arriba, Links abajo */
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
@@ -81,7 +81,7 @@
 
   .footer__links {
     flex-direction: column;
-    gap: 16px; /* Espaciado cómodo para tocar con el dedo */
+    gap: 16px;
   }
 
   .footer__social {
@@ -90,7 +90,7 @@
   }
 
   .footer__copyright {
-    order: 3; /* Aseguramos que el copyright sea lo último que se vea */
+    order: 3;
     margin-top: 8px;
   }
 }

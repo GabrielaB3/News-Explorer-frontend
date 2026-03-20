@@ -44,7 +44,7 @@
 
 /* Tooltip "Sign in to save" */
 .news-card__tooltip {
-  display: none; /* Se oculta por defecto */
+  display: none;
   background-color: #ffffff;
   padding: 8px 12px;
   border-radius: 4px;
@@ -53,10 +53,9 @@
 }
 
 .news-card__button-container:hover .news-card__tooltip {
-  display: block; /* Aparece al hacer hover */
+  display: block;
 }
 
-/* Estilos de los iconos (Asegúrate de tener estos SVGs) */
 .news-card__button_type_save {
   background-image: url("../../assets/save-icon.svg");
 }
