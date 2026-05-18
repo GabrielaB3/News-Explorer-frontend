@@ -1,0 +1,24 @@
+.modal__form {
+  display: flex;
+  margin-bottom: 23px;
+}
+
+.modal__title {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 620px) {
+  .modal_type_success .modal__container {
+    min-height: 170px;
+    padding-bottom: 40px;
+  }
+
+  .modal_type_success .modal__title {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .modal_type_success .modal__secondary-link {
+    font-size: 16px;
+  }
+}

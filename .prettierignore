@@ -1,0 +1,8 @@
+# Dependencis & builds
+node_modules
+dist
+build
+
+# Congf
+package-lock.json
+public

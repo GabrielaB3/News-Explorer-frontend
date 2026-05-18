@@ -1,0 +1,121 @@
+.search-form {
+  background-image: url("../../assets/background-phone.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 160px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  min-height: 576px;
+}
+
+.search-form__title {
+  font-family: "Roboto Slab", serif;
+  text-align: left;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 64px;
+  margin: 0 0 32px;
+  max-width: 600px;
+}
+
+.search-form__subtitle {
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 88px;
+}
+
+.search-form__input-container {
+  display: flex;
+  width: 100%;
+  max-width: 1140px;
+  width: 608px;
+  background-color: #ffffff;
+  backdrop-filter: blur(8px);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.search-form__input {
+  flex: 1;
+  border: none;
+  padding: 21px 24px;
+  font-size: 16px;
+  outline: none;
+  color: #000000;
+}
+
+.search-form__input::placeholder {
+  color: #b6bcbf;
+}
+
+.search-form__button {
+  background-color: #2f71e5;
+  color: #ffffff;
+  border: none;
+  padding: 20px 42px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-form__button:hover {
+  background-color: #347eff;
+}
+
+@media screen and (max-width: 1024px) {
+  .search-form__input-container {
+    width: 452px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .search-form {
+    background-image: url("../../assets/background-phone2.svg");
+    padding: 84px 16px 32px;
+    min-height: 400px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .search-form__title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
+
+  .search-form__subtitle {
+    font-size: 18px;
+    margin-bottom: 120px;
+    max-width: 100%;
+  }
+
+  .search-form__input-container {
+    flex-direction: column;
+    background-color: transparent;
+    width: 288px;
+    border-radius: 0;
+    gap: 16px;
+    overflow: visible;
+  }
+
+  .search-form__input {
+    border-radius: 100px;
+    height: 56px;
+    padding: 16px 24px;
+  }
+
+  .search-form__button {
+    border-radius: 100px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
